@@ -6,7 +6,7 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <Router basename="/projeto-react/">
+    <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
