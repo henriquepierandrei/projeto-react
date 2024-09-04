@@ -1,0 +1,36 @@
+/* src/components/style.css */
+
+header {
+    background-color: #ffffff; /* Cor de fundo do cabeçalho */
+    padding: 1rem; /* Espaçamento interno */
+    color: rgb(26, 24, 24); /* Cor do texto */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    left: 0; /* Garante que o cabeçalho se alinhe ao lado esquerdo da página */
+    z-index: 1000;
+    box-shadow:  0px 4px 10px #26272718; /* Garante que o cabeçalho esteja acima de outros elementos */
+  }
+  
+  nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Alinha os itens da lista horizontalmente */
+    justify-content: space-around; /* Distribui os itens igualmente */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove preenchimento padrão */
+  }
+  
+  nav li {
+    margin: 0; /* Remove margem dos itens da lista */
+  }
+  
+  nav a {
+    color: rgb(24, 24, 29); /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-weight: bold; /* Torna o texto dos links em negrito */
+  }
+  
+  nav a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o link */
+  }
+  
