@@ -127,7 +127,10 @@ function BuscarPorCodigo() {
                     </div>
                 )}
             </div>
+            <br /> <hr /><br />
+           
         </div>
+        
     );
 }
 
