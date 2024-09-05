@@ -9,24 +9,22 @@ function Home() {
     const [showPopup, setShowPopup] = useState(false); // Estado para controlar a visibilidade do popup
     const [popupMessage, setPopupMessage] = useState(''); // Estado para armazenar a mensagem do popup
 
-    
 
-    
-    
+
+
+
 
     async function getParking(event) {
         event.preventDefault(); // Previne o comportamento padrão do formulário
 
         try {
-            const token = localStorage.getItem('token'); // Supondo que o token seja armazenado no localStorage
-
             // Fazendo a requisição GET com o parâmetro de data
             const response = await api.get(`admin/parkeds?date=${date}`);
 
             if (response.data.length === 0) {
                 setPopupMessage(`Não existem veículos para a data ${date}`);
                 setShowPopup(true);
-                setTimeout(() => setShowPopup(false), 5000); // Esconde o popup após 5 segundos
+                setTimeout(() => setShowPopup(false), 7000); // Esconde o popup após 5 segundos
             } else {
                 setParkeds(response.data); // Atualiza o estado com os dados retornados
             }
@@ -36,7 +34,7 @@ function Home() {
     }
 
     return (
-    
+
         <div className='body-name'>
             <div className="container">
                 <div className="heading">Consult Vehicle Parking</div>
@@ -102,30 +100,30 @@ function Home() {
             </div>
 
             <div className='infos'>
-  {parkeds.length > 0 && (
-    <div className="parked-list">
-      {parkeds.map((parked, index) => (
-        <div key={index} className='parked-item'>
-          <div className='query'>
-            <p><strong className='query-label'>Vaga:</strong> {parked.place}</p>
-          </div>
-          <div className='query'>
-            <p><strong className='query-label'>Data Início:</strong> {parked.dateTimeArrival}</p>
-          </div>
-          <div className='query'>
-            <p><strong className='query-label'>Data Final:</strong> {parked.dateTimeExit}</p>
-          </div>
-          <div className='car-info'>
-            <p><strong>Placa:</strong> {parked.car.plate}</p>
-            <p><strong>Cor:</strong> {parked.car.color}</p>
-            <p><strong>Marca:</strong> {parked.car.carMark}</p>
-            <p><strong>Modelo:</strong> {parked.car.carModel}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  )}
-</div>
+                {parkeds.length > 0 && (
+                    <div className="parked-list">
+                        {parkeds.map((parked, index) => (
+                            <div key={index} className='parked-item'>
+                                <div className='query'>
+                                    <p><strong className='query-label'>Vaga:</strong> {parked.place}</p>
+                                </div>
+                                <div className='query'>
+                                    <p><strong className='query-label'>Data Início:</strong> {parked.dateTimeArrival}</p>
+                                </div>
+                                <div className='query'>
+                                    <p><strong className='query-label'>Data Final:</strong> {parked.dateTimeExit}</p>
+                                </div>
+                                <div className='car-info'>
+                                    <p><strong>Placa:</strong> {parked.car.plate}</p>
+                                    <p><strong>Cor:</strong> {parked.car.color}</p>
+                                    <p><strong>Marca:</strong> {parked.car.carMark}</p>
+                                    <p><strong>Modelo:</strong> {parked.car.carModel}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
 
 
 
