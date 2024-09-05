@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080', // Base URL do backend
+    // baseURL: 'http://localhost:8080', // Base URL do backend
+    baseURL:'http://192.168.1.100:8080',
     headers: {
         'Content-Type': 'application/json', // Tipo de conteúdo esperado
     }
@@ -19,3 +20,5 @@ api.interceptors.request.use(config => {
 });
 
 export default api;
+
+
