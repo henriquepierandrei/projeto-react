@@ -100,29 +100,25 @@ function Home() {
             </div>
 
             <div className='infos'>
-                {parkeds.length > 0 && (
-                    <div className="parked-list">
-                        {parkeds.map((parked, index) => (
-                            <div key={index} className='parked-item'>
-                                <div className='query'>
-                                    <p><strong className='query-label'>Vaga:</strong> {parked.place}</p>
-                                </div>
-                                <div className='query'>
-                                    <p><strong className='query-label'>Data Início:</strong> {parked.dateTimeArrival}</p>
-                                </div>
-                                <div className='query'>
-                                    <p><strong className='query-label'>Data Final:</strong> {parked.dateTimeExit}</p>
-                                </div>
-                                <div className='car-info'>
-                                    <p><strong>Placa:</strong> {parked.car.plate}</p>
-                                    <p><strong>Cor:</strong> {parked.car.color}</p>
-                                    <p><strong>Marca:</strong> {parked.car.carMark}</p>
-                                    <p><strong>Modelo:</strong> {parked.car.carModel}</p>
-                                </div>
-                            </div>
-                        ))}
+                {parkeds.map((parked, index) => (
+                    <div key={index} className='parked-item'>
+                        <div className='query'>
+                            <p><i className="fas fa-location-dot"></i><strong className='query-label'>Vaga:</strong> {parked.place}</p>
+                        </div>
+                        <div className='query'>
+                            <p><i className="fas fa-clock"></i><strong className='query-label'>Data Início:</strong> {parked.data1}</p>
+                        </div>
+                        <div className='query'>
+                            <p><i className="fas fa-clock"></i><strong className='query-label'>Data Final:</strong> {parked.data2}</p>
+                        </div>
+                        <div className='car-info'>
+                            <p><i className="fas fa-car"></i> <strong>Placa:</strong> {parked.plate}</p>
+                            <p><i className="fas fa-palette"></i> <strong>Cor:</strong> {parked.color}</p>
+                            <p><i className="fas fa-car-side"></i> <strong>Marca:</strong> {parked.mark}</p>
+                            <p><i className="fas fa-car-alt"></i> <strong>Modelo:</strong> {parked.model}</p>
+                        </div>
                     </div>
-                )}
+                ))}
             </div>
 
 
