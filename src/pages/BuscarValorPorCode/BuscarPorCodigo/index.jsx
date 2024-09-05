@@ -13,7 +13,7 @@ function BuscarValorPorCode() {
 
         try {
             // Fazendo a requisição GET com o parâmetro de código
-            const response = await api.get(`admin/parking/value?code=${code}`);
+            const response = await api.get(`/api/admin/parking/value?code=${code}`);
 
 
             if (response.data.length === 0) {

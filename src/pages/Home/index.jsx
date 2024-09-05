@@ -20,7 +20,7 @@ function Home() {
 
         try {
             // Fazendo a requisição GET com o parâmetro de data
-            const response = await api.get(`admin/parkeds?date=${date}`);
+            const response = await api.get(`/api/admin/parkeds?date=${date}`);
 
             if (response.data.length === 0) {
                 setPopupMessage(`Não existem veículos para a data ${date}`);
