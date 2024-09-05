@@ -1,16 +1,17 @@
 /* src/components/style.css */
 
 header {
-    background-color: #050404; /* Cor de fundo do cabeçalho */
+    background-color: #19182e; /* Cor de fundo do cabeçalho */
     padding: 1.2rem; /* Espaçamento interno */
     color: rgb(255, 255, 255); /* Cor do texto */
+
     position: fixed; /* Fixa o cabeçalho no topo da página */
     width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
     top: 0; /* Posiciona o cabeçalho no topo da página */
     left: 0; /* Garante que o cabeçalho se alinhe ao lado esquerdo da página */
     z-index: 1000;
     text-decoration: none;
-    box-shadow:  0px 4px 10px #26272718; /* Garante que o cabeçalho esteja acima de outros elementos */
+    box-shadow:  0px 4px 15px #0000005e; /* Garante que o cabeçalho esteja acima de outros elementos */
   }
   
   nav ul {
@@ -35,6 +36,6 @@ header {
   nav a:hover {
     padding-bottom: 10px;
     transition-duration: 1s;
-    border-bottom: 1px solid white; /* Adiciona sublinhado ao passar o mouse sobre o link */
+    border-bottom: 2px solid rgb(211, 198, 198); /* Adiciona sublinhado ao passar o mouse sobre o link */
   }
   

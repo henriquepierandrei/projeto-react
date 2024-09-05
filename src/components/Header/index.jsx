@@ -11,7 +11,6 @@ function Header() {
         <ul>
           <li><Link to="/">Buscar por Data</Link></li>
           <li><Link to="/code">Buscar por Código</Link></li>
-          <li><Link to="/total">Obter Total</Link></li>
         </ul>
       </nav>
     </header>
