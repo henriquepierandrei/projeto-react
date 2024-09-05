@@ -7,7 +7,6 @@ const api = axios.create({
         'Content-Type': 'application/json', // Tipo de conteúdo esperado
     }
 });
-
 // Adiciona o token em todas as requisições
 api.interceptors.request.use(config => {
     const token = localStorage.getItem('token');
