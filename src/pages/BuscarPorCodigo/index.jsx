@@ -3,9 +3,9 @@ import './style.css';
 
 import api from "../../services/api"; // Importa a instância do axios configurada
 
-function Home() {
-    const [date, setDate] = useState(''); // Estado para armazenar a data
-    const [parkeds, setParkeds] = useState([]); // Estado para armazenar os veículos estacionados
+function BuscarPorCodigo() {
+    const [code, setCode] = useState(''); // Estado para armazenar a data
+    const [parked, setParked] = useState([]); // Estado para armazenar os veículos estacionados
     const [showPopup, setShowPopup] = useState(false); // Estado para controlar a visibilidade do popup
     const [popupMessage, setPopupMessage] = useState(''); // Estado para armazenar a mensagem do popup
 
@@ -20,14 +20,14 @@ function Home() {
 
         try {
             // Fazendo a requisição GET com o parâmetro de data
-            const response = await api.get(`admin/parkeds?date=${date}`);
+            const response = await api.get(`/admin/parking/value?date=${code}`);
 
             if (response.data.length === 0) {
-                setPopupMessage(`Não existem veículos para a data ${date}`);
+                setPopupMessage(`Não existe veículo para o código ${date}`);
                 setShowPopup(true);
                 setTimeout(() => setShowPopup(false), 7000); // Esconde o popup após 5 segundos
             } else {
-                setParkeds(response.data); // Atualiza o estado com os dados retornados
+                setParked(response.data); // Atualiza o estado com os dados retornados
             }
         } catch (error) {
             console.error("Erro ao obter parkeds:", error);
@@ -38,18 +38,18 @@ function Home() {
 
         <div className='body-name'>
             <div className="container">
-                <div className="heading">Consult Vehicle Parking</div>
+                <div className="heading">Consult Vehicle Parking By Code</div>
                 <form className="form" onSubmit={getParking} method="GET">
                     <div className="input-field">
                         <input
                             required
                             autoComplete="off"
-                            type="date"
-                            name="date"
-                            id="date"
-                            placeholder='Data'
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)} // Atualiza o estado da data
+                            type="text"
+                            name="code"
+                            id="code"
+                            placeholder='Código'
+                            value={code}
+                            onChange={(e) => setCode(e.target.value)} // Atualiza o estado da data
                         />
                     </div>
                     <div className="btn-container">
@@ -129,4 +129,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default BuscarPorCodigo;
