@@ -37,7 +37,9 @@ function BuscarPorCodigo() {
 
 
     return (
+        
         <div className='body-name'>
+            <br /><br />
             <div className="container">
                 <div className="heading">Consult Vehicle Parking By Code</div>
                 <form className="form" onSubmit={getParking} method="GET">
