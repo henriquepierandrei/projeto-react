@@ -12,7 +12,7 @@ function App() {
       <Routes>
 
         <Route 
-          path="/" 
+          path="/consulta" 
           element={
             <>
               <Home />
