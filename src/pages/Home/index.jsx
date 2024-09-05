@@ -38,7 +38,7 @@ function Home() {
 
         <div className='body-name'>
             <div className="container">
-                <div className="heading">Consult Vehicle Parking</div>
+                <div className="heading">Consultar Veículo por Data</div>
                 <form className="form" onSubmit={getParking} method="GET">
                     <div className="input-field">
                         <input

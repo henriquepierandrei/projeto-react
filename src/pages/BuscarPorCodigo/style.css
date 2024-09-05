@@ -130,16 +130,17 @@ p{
 
 /* Popup */
 .popup {
-  position: fixed;
-  bottom: 5%; /* Ajustado para um posicionamento mais confortável */
+  position: absolute;
+  height: 70px;
+  top: 10%; /* Ajustado para um posicionamento mais confortável */
   right: 5%;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   width: auto;
   max-width: 300px; /* Define um limite máximo para a largura do popup */
   display: flex;
   padding: 15px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.288);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.521);
   opacity: 0; /* Começa invisível */
   animation: fadeIn 0.5s forwards; /* Animação de fade-in ao exibir */
 }

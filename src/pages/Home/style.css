@@ -73,6 +73,7 @@
 .container {
   border-left: solid 10px #373a52;
   padding: 40px;
+  
   padding-right: 100px; /* Pode ser ajustado conforme necessário */
   box-shadow:  0px 4px 15px #26272749;
   width: 100%; /* Preenche toda a largura do body */

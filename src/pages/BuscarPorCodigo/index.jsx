@@ -41,7 +41,7 @@ function BuscarPorCodigo() {
         <div className='body-name'>
             <br /><br />
             <div className="container">
-                <div className="heading">Consult Vehicle Parking By Code</div>
+                <div className="heading">Consultar Veículo por Código</div>
                 <form className="form" onSubmit={getParking} method="GET">
                     <div className="input-field">
                         <input
