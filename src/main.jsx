@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Header />
         <Routes>
           <Route 
-            path="/consulta" 
+            path="/project-react/consulta" 
             element={
               <>
                 <BuscarPorCodigo />

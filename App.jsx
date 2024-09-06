@@ -12,7 +12,7 @@ function App() {
       <Routes>
 
         <Route 
-          path="/consulta" 
+          path="/project-react/consulta" 
           element={
             <>
               <Home />
